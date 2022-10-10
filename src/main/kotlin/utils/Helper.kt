@@ -2,9 +2,17 @@ package utils
 
 object Helper {
 
-    fun fieldValidation(): Boolean { return false }
+    fun fieldValidation(fieldValue: String): Boolean {
+        return fieldValue == ""
+    }
 
-    fun validatePassword(password: String, rePassword: String): Boolean {  return false }
+    fun checkValidRecord(option: Int, size: Int): Boolean {
+        return option != 0 && option <= size
+    }
+
+    fun validatePassword(password: String, rePassword: String): Boolean {
+        return password != rePassword
+    }
 
     fun generateOTP(): Int { return 0 }
 }

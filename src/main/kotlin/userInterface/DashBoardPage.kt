@@ -1,8 +1,20 @@
 package userInterface
 
-class DashBoardPage {
+import backend.CustomerActivities
 
-    fun showDashBoard() { }
+class DashBoardPage {
+    fun showDashBoard() {
+
+        while (true) {
+            println("----------Dashboard----------")
+            try {
+
+            } catch (exception: Exception) {
+                println("Class DashboardPage: showDashBoard(): Exception: $exception")
+            }
+        }
+
+    }
 
     fun dashBoardActivities() { }
 }

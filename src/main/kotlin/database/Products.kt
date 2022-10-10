@@ -1,7 +1,7 @@
 package database
 
-class Products(val category: String) {
-    private lateinit var categories: MutableMap<String,MutableList<Product>>
+object Products {
+    lateinit var categories: MutableMap<String,MutableList<Product>>
 
     private val ponniyinSelvanBook1 = Product("Ponniyin Selvan Book 1",1,400f)
     private val ponniyinSelvanBook2 = Product("Ponniyin Selvan Book 2",2,412f)

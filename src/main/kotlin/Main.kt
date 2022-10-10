@@ -1,3 +1,6 @@
+import userInterface.EntryPage
+
 fun main() {
-    println("Hello World!")
+    val entry = EntryPage()
+    entry.showEntryPage()
 }
