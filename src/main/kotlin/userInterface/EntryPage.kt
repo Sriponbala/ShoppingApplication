@@ -3,6 +3,7 @@ package userInterface
 import backend.CustomerActivities
 import enums.Entry
 import utils.Helper
+import kotlin.random.Random
 
 class EntryPage {
 
@@ -36,13 +37,13 @@ class EntryPage {
         val customerActivity = CustomerActivities()
         when(entry) {
             Entry.SIGNUP -> {
-                val signUpPage = SignUpPage()
-                signUpPage.signUp()
+                SignUpPage().signUp()
+                //signUpPage.signUp()
                 return true
             }
             Entry.SIGNIN -> {
-                val signInPage = SignInPage()
-                signInPage.signIn()
+                SignInPage().signIn()
+                //signInPage.signIn()
                 return true
             }
             Entry.EXIT -> {
@@ -56,3 +57,4 @@ class EntryPage {
         }
     }
 }
+

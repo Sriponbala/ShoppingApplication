@@ -1,7 +1,15 @@
 package database
 
+//class Products private constructor(){
 object Products {
-    lateinit var categories: MutableMap<String,MutableList<Product>>
+    private var categories: MutableMap<String,MutableList<Product>>
+   /* companion object{
+        private val databaseInstance: Products by lazy {
+            Products()
+        }
+        fun getInstance() = databaseInstance
+    }*/
+
 
     private val ponniyinSelvanBook1 = Product("Ponniyin Selvan Book 1",1,400f)
     private val ponniyinSelvanBook2 = Product("Ponniyin Selvan Book 2",2,412f)
@@ -16,8 +24,9 @@ object Products {
     private val mobiles = mutableListOf<Product>(iphone14,samsungGalaxyM33,samsungGalaxyS20)
 
     init {
-        categories.put("Books", books)
-        categories.put("Mobiles", mobiles)
+        categories = mutableMapOf("Books" to books, "Mobiles" to mobiles)
     }
+
+    fun getProductsDatabase() = categories
 
 }
